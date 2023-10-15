@@ -60,13 +60,6 @@ st.sidebar.image(img)
 
 st.sidebar.divider()
 
-#card form, This crad will point to a website
-hasClicked = card(
-  title="Hello World!",
-  text="Some description",
-  image="http://placekitten.com/200/300",
-  url="https://sail.co.in"
-)
 
 
 col1, col2, col3 = st.columns((2,1,1))
