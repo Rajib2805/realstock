@@ -296,7 +296,7 @@ def tech_indicators():
                row_width=[0.2, 0.7])
         fig.add_trace(go.Candlestick(open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'], name='Stock Price'),row=1, col=1)
         fig.add_trace(go.Bar(x=df['Date'], y=df['Volume'], name='Volume'),row=2, col=1)
-        fig.update_layout(title='Stock Price and Volume', xaxis_title='Date', yaxis_title='Price')
+        fig.update_layout(title='Stock Price and Volume', xaxis_title='Date', yaxis_title='Price', layout_xaxis_rangeslider_visible=False)
         st.plotly_chart(fig)
 
         st.write('BollingerBands')
