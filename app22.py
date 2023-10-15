@@ -291,16 +291,16 @@ def tech_indicators():
         fig = go.Figure()
         df= data_added_columns
         fig.add_trace(go.Candlestick(
-            open=df['open'],
-            high=df['high'],
-            low=df['low'],
-            close=df['close'],
+            open=df['Open'],
+            high=df['High'],
+            low=df['Low'],
+            close=df['Close'],
             name='Stock Price'))
 
         # Add the volume chart
         fig.add_trace(go.Bar(
             x=df['date'],
-            y=df['volume'],
+            y=df['Volume'],
             name='Volume'))
 
         # Set the layout
