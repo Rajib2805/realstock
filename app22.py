@@ -287,7 +287,7 @@ def tech_indicators():
     if option == 'All important indicators':
         st.write('Close Price and SMA')
         st.line_chart(data_added_columns[['Close', 'SMA']])
-        
+        st.write(df_past)
         fig = go.Figure()
         df= df_past
         fig.add_trace(go.Candlestick(
