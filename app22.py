@@ -59,7 +59,7 @@ with st.expander("See explanation"):
     st.write('Hello, *World!* :sunglasses:')
     
 st.sidebar.image(img)
-
+st.write(df)
 st.sidebar.divider()
 
 #Lottie file for streamlit animation
