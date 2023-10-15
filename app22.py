@@ -289,7 +289,7 @@ def tech_indicators():
         st.line_chart(data_added_columns[['Close', 'SMA']])
         
         fig = go.Figure()
-        df= data_past
+        df= df_past
         fig.add_trace(go.Candlestick(
             open=df['Open'],
             high=df['High'],
