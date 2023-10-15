@@ -286,7 +286,7 @@ def tech_indicators():
         st.line_chart(data_added_columns[['Close', 'SMA']])
         
         st.write('Candlestick chart')
-        st.plotly_chart(data_added_columns.iplot(kind="candle"))
+        st.plotly_chart(data_added_columns.plot(kind="candle"))
         
         st.write('BollingerBands')
         st.line_chart(bb[['Close', 'bb_h', 'bb_l']])
