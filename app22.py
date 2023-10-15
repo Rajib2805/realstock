@@ -287,7 +287,7 @@ def tech_indicators():
         st.write('Close Price and SMA')
         st.line_chart(data_added_columns[['Close', 'SMA']])
 
-        st.write(data_added_columns[['Date']])
+        st.write(data_added_columns[['Volume']])
         df= data_added_columns
         fig = go.Figure()
         fig.add_trace(go.Candlestick(
