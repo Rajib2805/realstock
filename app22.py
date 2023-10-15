@@ -286,7 +286,14 @@ def tech_indicators():
     if option == 'All important indicators':
         st.write('Close Price and SMA')
         st.line_chart(data_added_columns[['Close', 'SMA']])
-        
+
+        stock = option # One stock prediction chart at a time for the stock chosen in the left panel dropdown
+        #stocks = ['CUBEXTUB.NS', 'AIAENG.NS',  'ASTEC.NS'] # if bultiple stock predictions are required
+        pd.options.mode.chained_assignment = None
+        tf.random.set_seed(0)
+
+        stock_short = yf.Ticker(stock)
+        df = stock_short.history(start= date.today()-timedelta(800), end= date.today(), interval= '1d')
         fig = go.Figure()
         fig.add_trace(go.Candlestick(
             open=df['Open'],
