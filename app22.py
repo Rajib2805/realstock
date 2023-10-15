@@ -34,6 +34,7 @@ from streamlit_card import card
 from streamlit_login_auth_ui.widgets import __login__
 import mplfinance as fplt
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 
 #Page configuration settings. Note the icon on the left top corner and the menus on the dot dot dot on the right top corner
