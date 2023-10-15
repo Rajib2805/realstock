@@ -49,29 +49,7 @@ st.set_page_config(
 
 #########################################
 
-with st.sidebar:
-    selected = option_menu("Utilities", ["Firstaa", "Secondaa", "Thirdaa"], orientation= 'horizontal',)
 
-    if(selected == 'Firstaa'):
-        tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
-        with tab1:
-           st.header("A cat")
-           st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
-        with tab2:
-           st.header("A dog")
-           img = Image.open("pexels-leeloo-thefirst-7247399.jpg") 
-           #transposing image 
-           transposed_img = img.transpose(Image.FLIP_LEFT_RIGHT)
-          
-           
-          
-           st.image(transposed_img, width=200)
-            
-    elif(selected == 'Secondaa'):
-        st.subheader("Second Menu Job")
-    elif(selected == 'Thirdaa'):
-        st.subheader("Third Menu job")
-    
 
 ############################################################################################
 
