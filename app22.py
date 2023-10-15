@@ -360,7 +360,7 @@ def predictionchart():
     tf.random.set_seed(0)
 
     stock_short = yf.Ticker(stock)
-    df = stock_short.history(start= date.today()-timedelta(120), end= date.today(), interval= '1d')
+    df = stock_short.history(start= date.today()-timedelta(800), end= date.today(), interval= '1d')
     y = df['Close'].fillna(method='ffill')
     y = y.values.reshape(-1, 1)
 
@@ -370,8 +370,8 @@ def predictionchart():
     y = scaler.transform(y)
 
     # generate the input and output sequences
-    n_lookback = 70  # length of input sequences (lookback period)
-    n_forecast = 5  # length of output sequences (forecast period)
+    n_lookback = 270  # length of input sequences (lookback period)
+    n_forecast = 60  # length of output sequences (forecast period)
 
     X = []
     Y = []
