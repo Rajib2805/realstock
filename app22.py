@@ -287,7 +287,15 @@ def tech_indicators():
         st.line_chart(data_added_columns[['Close', 'SMA']])
         
         st.write('Candlestick chart')
-        st.plotly_chart(data_added_columns.plot(kind="candle"))
+        fplt.plot(
+            apple_df,
+            type='candle',
+            style='charles',
+            title='Apple, March - 2020',
+            ylabel='Price ($)',
+            volume=True,
+            ylabel_lower='Shares\nTraded',
+            )st.plotly_chart(data_added_columns.plot(kind="candle"))
         
         st.write('BollingerBands')
         st.line_chart(bb[['Close', 'bb_h', 'bb_l']])
