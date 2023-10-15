@@ -299,7 +299,7 @@ def tech_indicators():
 
         # Add the volume chart
         fig.add_trace(go.Bar(
-            x=df['date'],
+            x=df['Date'],
             y=df['Volume'],
             name='Volume'))
 
