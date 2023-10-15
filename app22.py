@@ -33,6 +33,8 @@ from streamlit_option_menu import option_menu
 from streamlit_card import card
 from streamlit_login_auth_ui.widgets import __login__
 import mplfinance as fplt
+import plotly.graph_objects as go
+
 
 #Page configuration settings. Note the icon on the left top corner and the menus on the dot dot dot on the right top corner
 #This settings are to be put before writing any other code in the page just after the library imports are complete
