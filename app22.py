@@ -288,7 +288,7 @@ def tech_indicators():
         st.line_chart(data_added_columns[['Close', 'SMA']])
 
         st.write(data_added_columns)
-        #data_added_columns.reset_index(inplace=True)
+        data_added_columns.reset_index(inplace=True)
         
         df= data_added_columns
         fig = go.Figure()
