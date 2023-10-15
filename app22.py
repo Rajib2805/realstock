@@ -51,7 +51,7 @@ st.set_page_config(
 #########################################
 
 st.title('Stock Market Dashboard')
-st.write(dfpast)
+st.write(df_past)
 
 #st.Image("https://www.pexels.com/photo/close-up-photo-of-monitor-159888/")
 img = Image.open("pexels-leeloo-thefirst-7247399.jpg")
