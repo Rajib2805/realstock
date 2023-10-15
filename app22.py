@@ -51,7 +51,6 @@ st.set_page_config(
 #########################################
 
 st.title('Stock Market Dashboard')
-st.write(df_past)
 
 #st.Image("https://www.pexels.com/photo/close-up-photo-of-monitor-159888/")
 img = Image.open("pexels-leeloo-thefirst-7247399.jpg")
@@ -287,9 +286,8 @@ def tech_indicators():
     if option == 'All important indicators':
         st.write('Close Price and SMA')
         st.line_chart(data_added_columns[['Close', 'SMA']])
-        st.write(df_past)
+        
         fig = go.Figure()
-        df= df_past
         fig.add_trace(go.Candlestick(
             open=df['Open'],
             high=df['High'],
