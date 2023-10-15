@@ -284,6 +284,10 @@ def tech_indicators():
     if option == 'All important indicators':
         st.write('Close Price and SMA')
         st.line_chart(data_added_columns[['Close', 'SMA']])
+        
+        st.write('Candlestick chart')
+        st.plotly_chart(data_added_columns.iplot(kind="candle")
+        
         st.write('BollingerBands')
         st.line_chart(bb[['Close', 'bb_h', 'bb_l']])
         st.write('Moving Average Convergence Divergence')
