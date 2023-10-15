@@ -68,28 +68,6 @@ hasClicked = card(
   url="https://sail.co.in"
 )
 
-#This card if clicked will do something
-hasClicked = card(
-  title="Hello World!",
-  text="Some description",
-  image="http://placekitten.com/20/30",
-  on_click=lambda: print("Do ths job!"))
-
-from streamlit_card import card
-
-res = card(
-    title="Streamlit Card",
-    text="This is a test card",
-    image="https://placekitten.com/500/500",
-    styles={
-        "card": {
-            "width": "500px",
-            "height": "500px",
-            "border-radius": "60px",
-            "box-shadow": "0 0 10px rgba(0,0,0,0.5)"},
-        "text": {
-            "font-family": "serif",}})
-
 
 col1, col2, col3 = st.columns((2,1,1))
 original = Image.open("pexels-leeloo-thefirst-7247399.jpg")
