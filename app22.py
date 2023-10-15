@@ -287,37 +287,14 @@ def tech_indicators():
         st.write('Close Price and SMA')
         st.line_chart(data_added_columns[['Close', 'SMA']])
 
-        st.write(data_added_columns)
         data_added_columns.reset_index(inplace=True)
-        
         df= data_added_columns
         fig = go.Figure()
-        fig.add_trace(go.Candlestick(
-            open=df['Open'],
-            high=df['High'],
-            low=df['Low'],
-            close=df['Close'],
-            name='Stock Price'))
-
-        # Add the volume chart
-        fig.add_trace(go.Bar(
-            x=df['Date'],
-            y=df['Volume'],
-            name='Volume'))
-
-        # Set the layout
-        fig.update_layout(
-            title='Stock Price and Volume',
-            xaxis_title='Date',
-            yaxis_title='Price')
-
-        # Plot the chart
+        fig.add_trace(go.Candlestick(open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'], name='Stock Price'))
+        fig.add_trace(go.Bar(x=df['Date'], y=df['Volume'], name='Volume'))
+        fig.update_layout(title='Stock Price and Volume', xaxis_title='Date', yaxis_title='Price')
         st.plotly_chart(fig)
 
-
-
-        
-        
         st.write('BollingerBands')
         st.line_chart(bb[['Close', 'bb_h', 'bb_l']])
         st.write('Moving Average Convergence Divergence')
