@@ -89,36 +89,7 @@ grayscale = original.convert('LA')
 col3.header("Grayscale")
 col3.image(grayscale, use_column_width=True)
 
-#To get a grid layout with st.container
-st.title("Let's create a table!")
-for i in range(1, 10):
-    cols = st.columns(4)
-    cols[0].write(f'{i}')
-    cols[1].write(f'{i * i}')
-    cols[2].write(f'{i * i * i}')
-    cols[3].write('x' * i)
 
-#To get a grid layout with st.container
-st.title("Let's create a table!")
-for i in range(1, 10):
-    cols = st.columns(4)
-    cols[0].write('ABC')
-    cols[1].write(f'{i * i}')
-    cols[2].write(f'{i * i * i}')
-    cols[3].write('x' * i)
-
-
-
-
-from itertools import cycle
-
-filteredImages = ["https://static.streamlit.io/examples/cat.jpg" "https://static.streamlit.io/examples/cat.jpg",
-"https://static.streamlit.io/examples/cat.jpg", "https://static.streamlit.io/examples/cat.jpg",
-"https://static.streamlit.io/examples/cat.jpg", "pexels-leeloo-thefirst-7247399.jpg"]# your images here
-caption = ['a','a','a','a','a','a'] # your caption here
-cols = cycle(st.columns(4)) # st.columns here since it is out of beta at the time I'm writing this
-for idx, filteredImage in enumerate(filteredImages):
-    next(cols).image(filteredImage, width=150, caption=caption[idx])
 
 #Lottie file for streamlit animation
 with st.sidebar:
