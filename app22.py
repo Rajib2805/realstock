@@ -120,8 +120,8 @@ for i in tickers:  # for each asset selected
         val = dict_csv.get(i)  # get symbol from csv file
         symb_list.append(val)  # append symbol to list
 
-option = st.selectbox('Select the stock', symb_list) #['RELIANCE.NS', 'ITC.NS','BEL.NS']
-st.write("---") #It is the same as st.divider()
+#option = st.selectbox('Select the stock', symb_list) #['RELIANCE.NS', 'ITC.NS','BEL.NS']
+#st.write("---") #It is the same as st.divider()
 
 option = option.upper()
 today = datetime.date.today()
@@ -146,6 +146,11 @@ if st.button('Run'):
         download_data(option, start_date, end_date)
     else:
         st.error('Error: End date must fall after start date')
+
+
+start_date = st.sidebar.date_input('Start Date', value=before) # This was to show the inputs side by side
+end_date = st.sidebar.date_input('End date', today) # This was to show the inputs side by side
+
 
 #####################################################################################
 # CALLING THE FUNCTION download_data TO DOWNLOAD DATA
