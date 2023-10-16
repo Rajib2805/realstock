@@ -131,8 +131,8 @@ duration = duration *30
 st.write('Number of days from today:', int(duration/30),'months')
 before = today - datetime.timedelta(days=duration)
 
-start_date = st.sidebar.date_input('Start Date', value=before) # This was to show the inputs side by side
-end_date = st.sidebar.date_input('End date', today) # This was to show the inputs side by side
+#start_date = st.sidebar.date_input('Start Date', value=before) # This was to show the inputs side by side
+#end_date = st.sidebar.date_input('End date', today) # This was to show the inputs side by side
 
 col1, col2 = st.columns(2)
 with col1:
