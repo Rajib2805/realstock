@@ -140,7 +140,7 @@ with col1:
 with col2:
    end_date = st.sidebar.date_input('End Date', today)
 
-if st.button('Run'):
+if st.sidebar.button('Run'):
     if start_date < end_date:
         st.success('Start date: `%s`\n\nEnd date: `%s`' %(start_date, end_date))
         download_data(option, start_date, end_date)
