@@ -61,7 +61,7 @@ with st.expander("See explanation"):
     
 #st.sidebar.image(img)
 
-st.sidebar.divider()
+#st.sidebar.divider()
 
 #Lottie file for streamlit animation
 with st.sidebar:
