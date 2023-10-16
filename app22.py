@@ -294,7 +294,7 @@ def tech_indicators():
         data_added_columns.reset_index(inplace=True)
         df= data_added_columns
         #fig = go.Figure()
-        fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.03, subplot_titles=('', ''), row_width=[0.2, 0.7])
+        fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.03, subplot_titles=('', ''), row_width=[0.2, 0.9])
         fig.add_trace(go.Candlestick(open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'], name=''),row=1, col=1)
         fig.add_trace(go.Bar(x=df['Date'], y=df['Volume'], name=''),row=2, col=1)
         fig.update_layout(title='', xaxis_title='Date', yaxis_title='Price')
