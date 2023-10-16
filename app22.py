@@ -120,8 +120,8 @@ for i in tickers:  # for each asset selected
         val = dict_csv.get(i)  # get symbol from csv file
         symb_list.append(val)  # append symbol to list
 
-option = st.selectbox('Select the stock', symb_list) #['RELIANCE.NS', 'ITC.NS','BEL.NS']
-st.write("---") #It is the same as st.divider()
+option = st.sidebar.selectbox('Select the stock', symb_list) #['RELIANCE.NS', 'ITC.NS','BEL.NS']
+st.sidebar.write("---") #It is the same as st.divider()
 
 option = option.upper()
 today = datetime.date.today()
